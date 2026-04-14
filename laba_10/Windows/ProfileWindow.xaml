@@ -1,0 +1,115 @@
+﻿<Window x:Class="laba_10.Windows.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Личный кабинет" Height="550" Width="500"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F5F5">
+
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#4CAF50" CornerRadius="10" Padding="20" Margin="0,0,0,20">
+            <StackPanel>
+                <TextBlock Text=" Личный кабинет" FontSize="24" FontWeight="Bold" 
+                           Foreground="White" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="LblRole" Text="Пользователь" FontSize="14" 
+                           Foreground="#E8F5E9" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,20">
+            <Border Background="White" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="ФИО:" FontWeight="Bold" 
+                               Foreground="#424242" VerticalAlignment="Center"/>
+                    <TextBlock Grid.Column="1" x:Name="LblName" FontSize="14" 
+                               Foreground="#212121"/>
+                </Grid>
+            </Border>
+
+            <Border Background="White" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Email:" FontWeight="Bold" 
+                               Foreground="#424242" VerticalAlignment="Center"/>
+                    <TextBlock Grid.Column="1" x:Name="LblEmail" FontSize="14" 
+                               Foreground="#212121"/>
+                </Grid>
+            </Border>
+
+            <Border Background="White" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Телефон:" FontWeight="Bold" 
+                               Foreground="#424242" VerticalAlignment="Center"/>
+                    <TextBlock Grid.Column="1" x:Name="LblPhone" FontSize="14" 
+                               Foreground="#212121"/>
+                </Grid>
+            </Border>
+
+            <Border Background="White" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Направление:" FontWeight="Bold" 
+                               Foreground="#424242" VerticalAlignment="Center"/>
+                    <TextBlock Grid.Column="1" x:Name="LblDirection" FontSize="14" 
+                               Foreground="#212121"/>
+                </Grid>
+            </Border>
+
+            <Border Background="White" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Дата рождения:" FontWeight="Bold" 
+                               Foreground="#424242" VerticalAlignment="Center"/>
+                    <TextBlock Grid.Column="1" x:Name="LblBirth" FontSize="14" 
+                               Foreground="#212121"/>
+                </Grid>
+            </Border>
+
+            <Border Background="White" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Первая публикация:" FontWeight="Bold" 
+                               Foreground="#424242" VerticalAlignment="Center"/>
+                    <TextBlock Grid.Column="1" x:Name="LblPub" FontSize="14" 
+                               Foreground="#212121"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <Button Grid.Row="2" Content="Выйти из системы" Click="Logout_Click" 
+                Height="45" Background="#F44336" Foreground="White"
+                FontSize="14" FontWeight="Bold"
+                BorderThickness="0" Cursor="Hand">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
